@@ -87,24 +87,18 @@ All commands can be executed directly inside your GitHub Codespace using this re
 
 ### **Steps**
 
-1. **Clone the NG911 software repository:**
+1. **Run the following command in your Codespace terminal to clone the NG911 repository:**
 
    ```bash
    git clone https://github.com/m5stack/M5Cardputer.git
-   
-   # or
-   
-   git clone https://github.com/m5stack/M5StampFly.git
-   
-   # or
-   
-   git clone https://github.com/m5stack/M5StamPLC.git
    ```
 
-2. **Navigate to the firmware folder:**
+   This will download the NG911 source code into your Codespace environment so you can generate and analyze its SBOM.
+
+2. **2.	Change into that folder, for example:**
 
    ```bash
-   cd M5Cardputer
+   cd ng911-dev
    ```
 
 3. **Generate an SBOM in SPDX format (Syft):**
@@ -120,16 +114,15 @@ All commands can be executed directly inside your GitHub Codespace using this re
    ```
 
 5. **Record in your report:**
-   - Number of components each tool reports.  
-   - One key difference (format, fields, or component count).  
-   - Screenshots of terminal output.
+   - How many components each tool reported (Syft vs. Trivy),
+   - One difference you notice between the SPDX SBOM and the CycloneDX SBOM (format, fields, component count, etc.), and
+   - Screenshots of your terminal output.
 
 6. **Confirm SBOM files exist:**
 
    ```bash
    ls ../deliverables/
    ```
-
 ---
 
 ## **Part 2: SBOM Vulnerability Analysis**
